@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Save Image Canvas</title>
+
+    <!-- Biblioteca que salva a imagem no formato .png -->
+    <script src="http://hongru.github.io/proj/canvas2image/canvas2image.js"></script>
+</head>
+<body>
+
+    <!-- É utilizado para incorporar conteúdo de vídeo em um documento  -->
+    <video id="player" controls autoplay></video>
+    <!-- Canvas armazenará o qadro da câmera (frame), com isso teremos o acesso ao fluxo da câmera -->
+    <canvas id="snapshot" width=320 height=240></canvas>
+    <!-- No botão iremos chamar a funçao que salva a imagem capturada da webcam -->
+    <button id="capture" onclick="save_image()">Capture</button>
+
+    <!-- JavaScript -->
+    <script src="javascript/script.js"></script>
+    
+</body>
+</html>
