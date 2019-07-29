@@ -15,5 +15,4 @@ function save_image(){
     context.drawImage(player, 0, 0, snapshotCanvas.width, snapshotCanvas.height);            
     var canvas = document.getElementById("snapshot");    
     Canvas2Image.saveAsJPEG(canvas);
-    console.log();
 }

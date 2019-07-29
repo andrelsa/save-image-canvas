@@ -8,16 +8,61 @@
 
     <!-- Biblioteca que salva a imagem obtida da webcam -->
     <script src="http://hongru.github.io/proj/canvas2image/canvas2image.js"></script>
+
+    <!-- Booststrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
 </head>
 <body>
 
     <!-- É utilizado para incorporar conteúdo de vídeo em um documento  -->
-    <video id="player" controls autoplay></video>
+    <!-- <video id="player" controls autoplay></video> -->
     <!-- Canvas armazenará o qadro da câmera (frame), com isso teremos o acesso ao fluxo da câmera -->
-    <canvas id="snapshot" width=320 height=240></canvas>
+    <!-- <canvas id="snapshot" width=320 height=240></canvas> -->
     <!-- No botão iremos chamar a funçao que salva a imagem capturada da webcam -->
-    <button id="capture" onclick="save_image()">Capture</button>
+    <!-- <button id="capture" onclick="save_image()">Capture</button> -->
 
+    <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block">
+                        <video id="player" controls autoplay width=500 height=600></video>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Registrar uma conta!</h1>
+                            </div>
+                            <form class="user" id="form-user">
+                                <div class="form-group ml-3 row">
+                                    <input type="text" class="form-control form-control-user" name="name" id="name"
+                                            placeholder="Nome completo">
+                                </div>
+                            </form>
+                            <hr>
+                            <form id="cadastrofoto" class="text-center">
+                                <div class="container">
+                                    <canvas id="snapshot" width=420 height=300 style="border:2px solid #000000;"></canvas>
+                                </div>
+                            </form>
+                            <button class="btn btn-primary btn-user btn-block" type="button" name="cadastrar"
+                                    id="cadastrar" onclick="save_image()">Cadastar
+                            </button>
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="index.html">Já tem uma conta? Login!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
     <!-- JavaScript -->
     <script src="javascript/script.js"></script>
     
